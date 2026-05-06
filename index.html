@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>뽀송퇴근 — 직장인 세탁 가이드</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="page">
+
+  <!-- [A] HERO -->
+  <section class="hero">
+    <p class="hero-label">Smart Laundry Guide</p>
+    <h1 class="hero-title">뽀송퇴근 🧺</h1>
+    <div class="status-badge ok" id="statusBadge">
+      <span class="status-icon" id="statusIcon">✅</span>
+      <span id="statusText">오늘 퇴근 후 빨래해도 돼요!</span>
+    </div>
+  </section>
+
+  <!-- [B] HUMIDITY WIDGET -->
+  <div class="humidity-wrap">
+    <div class="humidity-card">
+      <div class="humidity-big" id="humidityNum">--<span>%</span></div>
+      <div class="humidity-info">
+        <strong id="humidityLabel">현재 습도</strong>
+        <small id="humidityDesc">기상청 데이터 로딩 중...</small>
+        <div class="humidity-bar-track">
+          <div class="humidity-bar-fill" id="humidityBar" style="width:0%"></div>
+        </div>
+        <small class="bar-guide">기준: 70% 초과 시 위험</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- [C] GRID -->
+  <div class="grid">
+
+    <!-- 건조기 토글 -->
+    <div class="card dryer-card">
+      <div class="card-label">건조기 보유 여부</div>
+      <div class="dryer-row">
+        <div class="dryer-text">
+          <h3>🌀 건조기 있으신가요?</h3>
+          <p>건조기 유무에 따라 세탁 추천 방식이 달라집니다.</p>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn" id="btnYes" onclick="setDryer(true)">있어요</button>
+          <button class="toggle-btn" id="btnNo"  onclick="setDryer(false)">없어요</button>
+        </div>
+      </div>
+      <div class="dryer-result" id="dryerResult"></div>
+    </div>
+
+    <!-- 기기 카드 -->
+    <div class="card">
+      <div class="card-label">연결된 기기</div>
+      <div class="device-row">
+        <div class="device-icon-wrap">🫧</div>
+        <div>
+          <div class="device-name">세탁기</div>
+          <div class="device-power">⚡ 500 Wh · 소비전력</div>
+        </div>
+      </div>
+      <div class="status-dot-row">
+        <div class="dot"></div>
+        <span id="deviceStatus">대기 중</span>
+      </div>
+    </div>
+
+    <!-- 에너지 팁 -->
+    <div class="card">
+      <div class="card-label">전기요금 절약 팁</div>
+      <div class="tip-row">
+        <div class="tip-item peak">
+          <span class="tip-icon">🔴</span>
+          <div>
+            <div class="tip-time">14:00 – 16:00</div>
+            <div class="tip-desc">피크타임 · 요금이 비싸요!</div>
+          </div>
+        </div>
+        <div class="tip-item cheap">
+          <span class="tip-icon">🟢</span>
+          <div>
+            <div class="tip-time">22:00 – 08:00</div>
+            <div class="tip-desc">심야시간 · 지금 돌리면 저렴해요</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
