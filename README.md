@@ -20,6 +20,15 @@ ppossong_app/
 └── README.md
 ```
 
+[TODO]
+1. 날씨 데이터 받아오기
+   - 위치 : 'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst'
+   - 필요한 파라미터 : 
+
+2. 요일별로 세탁 정보 제공하기
+   
+
+
 ## 기상청 API 연동
 
 `app.js` 상단의 두 값을 입력하면 실데이터로 전환됩니다:
